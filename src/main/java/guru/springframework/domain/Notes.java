@@ -2,6 +2,7 @@ package guru.springframework.domain;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 
 
 /**
@@ -12,6 +13,8 @@ import lombok.Setter;
 public class Notes {
 
     private String id;
+
+    @DBRef
     private Recipe recipe;
     private String recipeNotes;
 
